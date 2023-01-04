@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Footer from '../lib/components/Footer.svelte';
+
 	const sloganList: string[] = [
 		'Conquest through superior technology.',
 		'Powering the future through unstoppable force.',
@@ -10,12 +12,6 @@
 </script>
 
 <main class="wrapper">
-	<ul class="nav">
-		<a href="/"><li>👁️‍🗨️</li></a>
-		<a href="/logs"><li>&#91 &nbsp LOGS &nbsp &#93;</li></a>
-		<a href="/subsystems"><li>&#91 &nbsp SUBSYSTEMS &nbsp &#93;</li></a>
-		<a href="/info"><li>&#91 &nbsp INFO &nbsp &#93;</li></a>
-	</ul>
 	<div class="grid">
 		<h1>sideral</h1>
 		<p>{sloganList[Math.floor(Math.random() * sloganList.length)]}</p>
@@ -26,10 +22,8 @@
 	<div class="stars-list-container">
 		<hr />
 		<marquee class="stars-list">
-			ETHEREAL · SIRIUS · LYRA · CARINA · ALTAIR · BELLATRIX · CASTOR · RIGEL · VEGA · POLARIS ·
-			BETELGEUSE · ADHARA · ALDEBARAN · CAPELLA · ANTARES · SIRIUS · LYRA · CARINA · ALTAIR ·
-			BELLATRIX · CASTOR · RIGEL · VEGA · POLARIS · BETELGEUSE · ADHARA · ALDEBARAN · CAPELLA ·
-			ANTARES
+			Gacrux · Procyon · Adhara · Antares · Wei · Girtab · Sargas · Graffias · Atria · Shaula ·
+			Apollyon · Spica · Acrux · Sirius · Polaris
 		</marquee>
 		<hr />
 	</div>
@@ -50,40 +44,18 @@
 		{/each}
 	</div>
 </main>
-<footer>
-	<div class="content-container">
-		<div id="logo">sideral</div>
-		<div>Copyright 2023 Alexandre Teles · Website by <a href="https://afn.lol">afn</a>.</div>
-		<ul>
-			<li>Twitter</li>
-			<li>Discord</li>
-			<li>Email</li>
-		</ul>
-	</div>
-</footer>
+<Footer />
 
 <!-- <img id="building" src="building.png" alt="building"/> -->
 <style lang="scss">
-	.nav {
-		display: flex;
-		font-family: var(--font-two);
-		list-style: none;
-		gap: 2rem;
-		margin-bottom: 2rem;
-
-		li {
-			color: var(--white-two);
-			cursor: pointer;
-
-			&:hover {
-				color: var(--purple);
-			}
-		}
+	main {
+		margin-bottom: 7rem;
 	}
 
 	h1 {
 		position: relative;
 		text-shadow: 0px 0px 71px rgba(187, 163, 255, 0.36);
+
 
 		&::before {
 			box-sizing: border-box;
@@ -109,16 +81,12 @@
 		}
 	}
 
-	.stars-list,
-	.stars-list-2 {
+	.stars-list {
+		text-transform: uppercase;
 		color: var(--purple-opacity);
 		font-size: 1.25rem;
 		white-space: nowrap;
 		overflow: hidden;
-	}
-
-	.stars-list-2 {
-		animation-delay: 15s;
 	}
 
 	.stars-list-container {
@@ -137,7 +105,6 @@
 			margin-bottom: 2px;
 		}
 	}
-
 
 	#logs {
 		margin-bottom: 1rem;
@@ -176,46 +143,6 @@
 		}
 		.log-post {
 			width: 100%;
-		}
-	}
-
-	footer {
-		border-top: 2px dashed rgba(140, 98, 255, 0.2);
-		display: flex;
-		align-items: center;
-		color: var(--white);
-		padding: 4rem;
-
-		.content-container {
-			width: min(90%, 60rem) !important;
-			margin: auto;
-			display: flex;
-			flex-direction: column;
-			gap: 1rem;
-		}
-
-		a {
-			color: var(--purple);
-		}
-
-		ul {
-			display: flex;
-			list-style: none;
-			gap: 2rem;
-
-			li {
-				color: var(--purple);
-			}
-		}
-
-		#logo {
-			margin: 0;
-			font-weight: 600;
-			font-size: 4rem;
-			letter-spacing: -0.06em;
-			height: max-content;
-			margin-top: -1rem;
-			margin-bottom: -1.5rem;
 		}
 	}
 </style>

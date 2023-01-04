@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../styles/global.scss';
+	import Nav from '../lib/components/Nav.svelte';
 </script>
 
 <svg width="100%" height="100%">
@@ -8,6 +9,7 @@
 	</filter>
 	<rect width="100%" height="100%" filter="url(#noise)" />
 </svg>
+<Nav />
 <slot />
 
 <style lang="scss">
@@ -15,7 +17,8 @@
 		pointer-events: none;
 		position: fixed;
 		width: 100%;
-		height: 100%;
+		top: 0;
+		bottom: 0;
 		overflow: hidden;
 		z-index: 999;
 		opacity: 0.8;

@@ -10,6 +10,7 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
 @media (max-width: 868px) {
     * {
         scroll-margin-top: 1rem;
@@ -26,13 +27,10 @@ body {
     padding: 0;
     line-height: 1.4;
     background-color: var(--bg-color);
-    overflow-x: hidden;
 }
 
 .wrapper {
     margin-inline: auto;
-    margin-top: 4rem;
-    margin-bottom: 7rem;
     width: min(90%, 60rem) !important;
 }
 
@@ -84,6 +82,7 @@ h2 {
     font-weight: 500;
     font-size: 2.25rem;
     border-radius: 12px;
+    line-height: 2.5rem;
     width: fit-content;
     text-align: left;
 }
