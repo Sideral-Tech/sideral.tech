@@ -61,7 +61,7 @@
 <!-- <img id="building" src="building.png" alt="building"/> -->
 <style lang="scss">
 	main {
-		margin-bottom: 7rem;
+		padding-bottom: 7rem;
 	}
 
 	h1 {

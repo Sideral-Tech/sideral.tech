@@ -1,5 +1,6 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import Footer from '$lib/Footer.svelte';
+import type { PageData } from './$types';
 	export let data: PageData;
 </script>
 
@@ -22,12 +23,13 @@
 		{/each}
 	</div>
 </main>
+<Footer/>
 
 <style lang="scss">
 	main {
-		margin-bottom: 4rem;
+		padding-bottom: 4rem;
 	}
-	
+
 	.tag {
 		color: var(--white-two);
 		display: block;

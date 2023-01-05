@@ -13,7 +13,7 @@
 
 <style lang="scss">
 	nav {
-		margin-top: 3rem;
+		padding-top: 3rem;
 		margin-bottom: 3rem;
 	}
 	

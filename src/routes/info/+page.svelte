@@ -44,7 +44,7 @@
 
 <style lang="scss">
 	main {
-		margin-bottom: 4rem;
+		padding-bottom: 4rem;
 		padding-right: 20rem;
 
 		@media (max-width: 1068px) {
