@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../styles/global.scss';
-	import Nav from '../lib/components/Nav.svelte';
+	import '../styles/syntax.scss';
+	import Nav from '../lib/NavBar.svelte';
 </script>
 
 <svg width="100%" height="100%">

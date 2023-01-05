@@ -1,11 +1,11 @@
 <script>
-	import Footer from '../../lib/components/Footer.svelte';
+	import Footer from '../../lib/Footer.svelte';
 </script>
 
 <main class="wrapper">
 	<article itemscope itemtype="https://schema.org/AboutPage">
 		<header>
-			<h1 itemprop="headline">info</h1>
+			<h1 itemprop="headline">/info</h1>
 		</header>
 		<section itemprop="text">
 			<p>
@@ -56,8 +56,8 @@
 	a {
 		color: var(--purple);
 		font-family: var(--font-two);
-		font-weight: 700;
 	}
+	
 	h1 {
 		font-size: 4rem;
 		margin-bottom: 2rem;

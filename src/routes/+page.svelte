@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Footer from '../lib/components/Footer.svelte';
+	import Footer from '../lib/Footer.svelte';
 
 	const sloganList: string[] = [
 		'Conquest through superior technology.',
@@ -37,7 +37,7 @@
 	<br />
 	<section itemscope itemtype="https://schema.org/ItemList">
 		<header itemprop="name">
-			<a href="/logs"><h3 id="logs">LOGS</h3></a>
+			<a href="/logs"><h3 id="logs">Logs</h3></a>
 		</header>
 		<div class="log-posts">
 			{#each Array(4) as _}
@@ -123,6 +123,7 @@
 		position: relative;
 		box-sizing: border-box;
 		width: max-content;
+		text-transform: uppercase;
 
 		&::after {
 			content: url('open.svg');

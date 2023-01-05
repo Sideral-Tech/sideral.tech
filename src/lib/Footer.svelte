@@ -49,7 +49,7 @@
 			letter-spacing: -0.06em;
 			height: max-content;
 			margin-top: -1rem;
-			margin-bottom: -1.5rem;
+			margin-bottom: -1rem;
 		}
 	}
 </style>

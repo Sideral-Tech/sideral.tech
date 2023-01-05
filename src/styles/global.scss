@@ -52,11 +52,12 @@ body.stop-transitions * {
 
 :root {
     --white: #aca1cb;
-    --white-two: #9d93ba;
+    --white-two: #7f7796;
     --purple: #835fe8;
-    --purple-opacity: #272b55;
+    --purple-opacity: #494d86;
     --bg-color: #030713;
     --neutral-one: #28214b6e;
+    --neutral-two: #101024;
     --font-one: "Chakra Petch", sans-serif;
     --font-two: "Space Mono", monospace;
     --bezier-one: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -105,11 +106,15 @@ h4 {
 
 p {
     font-family: var(--font-two);
-    letter-spacing: -0.06em;
+    letter-spacing: -0.04em;
     line-height: 1.5rem;
     color: var(--white-two);
     font-weight: 300;
     font-size: 0.95rem;
+
+    strong, del, em {
+        font-family: var(--font-two);
+    }
 }
 
 a {

@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Footer from '../../lib/components/Footer.svelte';
-	import type { Subsystem } from '../../lib/types';
+	import Footer from '../../lib/Footer.svelte';
 
-	const data: Subsystem[] = [
+	const data: App.Subsystem[] = [
 		{
 			name: 'vela',
 			categories: ['DNS', 'Tunnel'],
@@ -97,7 +96,7 @@
 						</div>
 						<section itemscope itemtype="https://schema.org/ItemList">
 							<header itemprop="name">
-								<h3>MODULES</h3>
+								<h3>Modules</h3>
 							</header>
 							<div class="modules">
 								{#each subsystem.modules as module}
@@ -196,6 +195,7 @@
 		font-weight: 600;
 		color: var(--white);
 		margin-bottom: 0.25rem;
+		text-transform: uppercase;
 	}
 
 	.module {
