@@ -24,10 +24,10 @@
 	<section itemprop="text">
 		<div class="stars-list-container">
 			<hr />
-			<p class="stars-list" itemscope itemtype="https://schema.org/ItemList">
+			<marquee class="stars-list" itemscope itemtype="https://schema.org/ItemList">
 				Gacrux · Procyon · Adhara · Antares · Wei · Girtab · Sargas · Graffias · Atria · Shaula ·
 				Apollyon · Spica · Acrux · Sirius · Polaris
-			</p>
+			</marquee>
 			<hr />
 		</div>
 	</section>
@@ -99,13 +99,6 @@
 		font-size: 1.25rem;
 		white-space: nowrap;
 		overflow: hidden;
-		display: inline-block;
-		animation: marquee 30s linear infinite;
-	}
-
-	@keyframes marquee {
-    0%   { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
 	}
 
 	.stars-list-container {
