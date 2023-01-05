@@ -76,32 +76,45 @@
 </script>
 
 <main class="wrapper">
-	<h1>/subsystems</h1>
-
-	<div class="subsystems">
-		{#each data as subsystem}
-			<div class="subsystem">
-				<a href={subsystem.url}><h2>{subsystem.name}</h2></a>
-				<p>{subsystem.description}</p>
-				<div class="categories">
-					{#each subsystem.categories as category}
-						<div class="category">
-							{category}
+	<article itemscope itemtype="https://schema.org/ItemList">
+		<header itemprop="name">
+			<h1>/subsystems</h1>
+		</header>
+		<div class="subsystems">
+			{#each data as subsystem}
+				<section itemscope itemtype="https://schema.org/VirtualLocation">
+					<div class="subsystem" itemprop="itemListElement">
+						<header itemprop="name">
+							<a href={subsystem.url} itemprop="url"><h2>{subsystem.name}</h2></a>
+						</header>
+						<p itemprop="description">{subsystem.description}</p>
+						<div class="categories">
+							{#each subsystem.categories as category}
+								<div class="category" itemprop="disambiguatingDescription">
+									{category}
+								</div>
+							{/each}
 						</div>
-					{/each}
-				</div>
-				<h3>MODULES</h3>
-				<div class="modules">
-					{#each subsystem.modules as module}
-						<a href={module.url} class="module">
-							<img alt={module.name} src={module.logo} />
-							<div class="text">{module.name}</div>
-						</a>
-					{/each}
-				</div>
-			</div>
-		{/each}
-	</div>
+						<section itemscope itemtype="https://schema.org/ItemList">
+							<header itemprop="name">
+								<h3>MODULES</h3>
+							</header>
+							<div class="modules">
+								{#each subsystem.modules as module}
+									<section itemscope itemtype="https://schema.org/SoftwareApplication">
+										<a itemprop="url" href={module.url} class="module">
+											<img itemprop="image" alt={module.name} src={module.logo} />
+											<div itemprop="name" class="text">{module.name}</div>
+										</a>
+									</section>
+								{/each}
+							</div>
+						</section>
+					</div>
+				</section>
+			{/each}
+		</div>
+	</article>
 </main>
 <Footer />
 

@@ -1,7 +1,9 @@
-<footer>
+<footer itemprop="breadcrumb">
 	<div class="content-container">
-		<div id="logo">sideral</div>
-		<div>Copyright 2023 Alexandre Teles · Website by <a href="https://afn.lol">afn</a>.</div>
+		<div id="logo" itemprop="name">sideral</div>
+		<div itemprop="creator" itemscope itemtype="https://schema.org/Person">
+			Copyright 2023 Alexandre Teles · Website by <a href="https://afn.lol">afn</a>.
+		</div>
 		<ul>
 			<li>Twitter</li>
 			<li>Discord</li>

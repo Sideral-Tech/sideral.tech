@@ -1,4 +1,4 @@
-<nav class="wrapper"> 
+<nav class="wrapper" itemprop="breadcrumb"> 
 	<ul class="nav">
 		<a href="/"><li>👁️‍🗨️</li></a>
 		<a href="/logs"><li>&#91 &nbsp LOGS &nbsp &#93;</li></a>

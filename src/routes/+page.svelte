@@ -13,36 +13,48 @@
 
 <main class="wrapper">
 	<div class="grid">
-		<h1>sideral</h1>
-		<p>{sloganList[Math.floor(Math.random() * sloganList.length)]}</p>
+		<header>
+			<h1 itemprop="name">sideral</h1>
+			<p itemprop="abstract">{sloganList[Math.floor(Math.random() * sloganList.length)]}</p>
+		</header>
 	</div>
 	<!-- temporary, will switch to grid -->
 	<br />
 	<br />
-	<div class="stars-list-container">
-		<hr />
-		<marquee class="stars-list">
-			Gacrux · Procyon · Adhara · Antares · Wei · Girtab · Sargas · Graffias · Atria · Shaula ·
-			Apollyon · Spica · Acrux · Sirius · Polaris
-		</marquee>
-		<hr />
-	</div>
+	<section itemprop="text">
+		<div class="stars-list-container">
+			<hr />
+			<marquee class="stars-list" itemscope itemtype="https://schema.org/ItemList">
+				Gacrux · Procyon · Adhara · Antares · Wei · Girtab · Sargas · Graffias · Atria · Shaula ·
+				Apollyon · Spica · Acrux · Sirius · Polaris
+			</marquee>
+			<hr />
+		</div>
+	</section>
 	<br />
 	<br />
 	<br />
 	<br />
-	<a href="/logs"><h3 id="logs">LOGS</h3></a>
-	<div class="log-posts">
-		{#each Array(4) as _}
-			<div class="log-post">
-				<a href="/"><h4>Uma breve análise sobre a Atenção</h4></a>
-				<p>
-					Neste Universo espaço é liberdade e tempo, prisão: é possível deslocar-se no tempo,
-					estando imóvel no espaço. Deslocar-se no espaço permanecendo...
-				</p>
-			</div>
-		{/each}
-	</div>
+	<section itemscope itemtype="https://schema.org/ItemList">
+		<header itemprop="name">
+			<a href="/logs"><h3 id="logs">LOGS</h3></a>
+		</header>
+		<div class="log-posts">
+			{#each Array(4) as _}
+				<section itemscope itemtype="http://schema.org/BlogPosting">
+					<div class="log-post">
+						<header itemprop="name">
+							<a href="/"><h4>Uma breve análise sobre a Atenção</h4></a>
+						</header>
+						<p itemprop="abstract">
+							Neste Universo espaço é liberdade e tempo, prisão: é possível deslocar-se no tempo,
+							estando imóvel no espaço. Deslocar-se no espaço permanecendo...
+						</p>
+					</div>
+				</section>
+			{/each}
+		</div>
+	</section>
 </main>
 <Footer />
 
