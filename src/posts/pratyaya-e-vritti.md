@@ -1,6 +1,6 @@
 ---
 title: 'Pratyaya e Vritti: as duas naturezas do pensamento'
-description: 'guhhh'
+description: 'O impulso humano para a ação é composto de hmenos menos duas polaridades: a interna, que reflete os desejos e a Inspiração...'
 author: '@alexandreteles'
 tags: ['i', 'dont', 'speak', 'portugese']
 date: '2029-02-31'

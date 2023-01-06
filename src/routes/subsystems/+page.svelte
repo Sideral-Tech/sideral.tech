@@ -1,77 +1,6 @@
 <script lang="ts">
 	import Footer from '../../lib/Footer.svelte';
-
-	const data: App.Subsystem[] = [
-		{
-			name: 'vela',
-			categories: ['DNS', 'Tunnel'],
-			description: 'Orbiting around the smallest quark star in the universe.',
-			url: '//vela.sideral.tech',
-			modules: [
-				{
-					name: 'Foundry',
-					logo: 'https://cdn.discordapp.com/emojis/967578777133674606.gif',
-					url: '//foundry.sideral.tech'
-				},
-				{
-					name: 'Foundry',
-					logo: 'https://cdn.discordapp.com/emojis/967578777133674606.gif',
-					url: '//foundry.sideral.tech'
-				},
-				{
-					name: 'Foundry',
-					logo: 'https://cdn.discordapp.com/emojis/967578777133674606.gif',
-					url: '//foundry.sideral.tech'
-				},
-				{
-					name: 'Foundry',
-					logo: 'https://cdn.discordapp.com/emojis/967578777133674606.gif',
-					url: '//foundry.sideral.tech'
-				}
-			]
-		},
-		{
-			name: 'vela',
-			categories: ['DNS', 'Tunnel'],
-			description: 'Orbiting around the smallest quark star in the universe.',
-			url: '//vela.sideral.tech',
-			modules: [
-				{
-					name: 'Foundry',
-					logo: 'https://cdn.discordapp.com/emojis/967578777133674606.gif',
-					url: '//foundry.sideral.tech'
-				}
-			]
-		},
-		{
-			name: 'vela',
-			categories: ['DNS', 'Tunnel'],
-			description: 'Orbiting around the smallest quark star in the universe.',
-			url: '//vela.sideral.tech',
-			modules: [
-				{
-					name: 'Foundry',
-					logo: 'https://cdn.discordapp.com/emojis/967578777133674606.gif',
-					url: '//foundry.sideral.tech'
-				}
-			]
-		},
-		{
-			name: 'vela',
-			categories: ['DNS', 'Tunnel'],
-			description: 'Orbiting around the smallest quark star in the universe.',
-			url: '//vela.sideral.tech',
-			modules: [
-				{
-					name: 'Foundry',
-					logo: 'https://cdn.discordapp.com/emojis/967578777133674606.gif',
-					url: '//foundry.sideral.tech'
-				}
-			]
-		}
-	];
-
-	console.log(data);
+	export let data;
 </script>
 
 <main class="wrapper">
@@ -80,7 +9,7 @@
 			<h1>/subsystems</h1>
 		</header>
 		<div class="subsystems">
-			{#each data as subsystem}
+			{#each data.subsystems as subsystem}
 				<section itemscope itemtype="https://schema.org/VirtualLocation">
 					<div class="subsystem" itemprop="itemListElement">
 						<header itemprop="name">

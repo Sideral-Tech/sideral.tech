@@ -1,10 +1,7 @@
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
-	import type { SvelteComponent } from 'svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
-
-	const post = data.component as SvelteComponent;
 </script>
 
 <main class="wrapper">
@@ -18,7 +15,7 @@
 			</div>
 		{/if}
 		<h1>&gt; {data.metadata.title}</h1>
-		<svelte:component this={post} />
+		<svelte:component this={data.component} />
 	</article>
 </main>
 <Footer />

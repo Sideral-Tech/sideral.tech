@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
-import type { PageData } from './$types';
+	import type { PageData } from './$types';
+	
+	// hydrated from ./+layout.svelte
 	export let data: PageData;
 </script>
 
@@ -23,7 +25,7 @@ import type { PageData } from './$types';
 		{/each}
 	</div>
 </main>
-<Footer/>
+<Footer />
 
 <style lang="scss">
 	main {
@@ -74,5 +76,11 @@ import type { PageData } from './$types';
 	.date {
 		color: var(--white-two);
 		font-size: 0.875rem;
+	}
+
+	@media screen and (max-width: 868px) {
+		h2 {
+			font-size: 1.75rem;
+		}
 	}
 </style>

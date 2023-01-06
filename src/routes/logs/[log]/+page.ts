@@ -15,7 +15,7 @@ export const load: PageLoad = async ({ params }) => {
 	}
 
 	const post = await match?.resolver?.();
-
+	
 	if (!post) {
 		throw error(404);
 	}
