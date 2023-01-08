@@ -1,7 +1,14 @@
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
 	import type { PageData } from './$types';
+
 	export let data: PageData;
+
+	// utterances settings
+	let theme = "boxy-light";
+	let reponame = "Sideral-Tech/sideral.tech"
+	let label = "blog comment"
+	let issueTerm = "pathname"
 </script>
 
 <main class="wrapper">
@@ -17,6 +24,16 @@
 		<h1>&gt; {data.metadata.title}</h1>
 		<svelte:component this={data.component} />
 	</article>
+	<div class="blog-comments">
+		<script src="https://utteranc.es/client.js"
+		repo="{reponame}"
+		issue-term="{issueTerm}"
+		label="{label}"
+		theme="{theme}"
+		crossorigin="anonymous"
+		async>
+		</script>
+	</div>
 </main>
 <Footer />
 
