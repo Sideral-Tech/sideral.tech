@@ -12,7 +12,7 @@
 
 <style lang="scss">
 	footer {
-		border-top: 2px dashed rgba(140, 98, 255, 0.2);
+		border-top: 2px dashed var(--purple-border);
 		display: flex;
 		align-items: center;
 		color: var(--white);

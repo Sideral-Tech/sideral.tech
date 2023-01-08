@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
 	import type { PageData } from './$types';
-	
+
 	// hydrated from ./+layout.svelte
 	export let data: PageData;
 </script>
@@ -54,7 +54,7 @@
 	h1 {
 		font-size: 4rem;
 		margin-bottom: 2rem;
-		text-shadow: 0px 0px 71px rgba(187, 163, 255, 0.36);
+		text-shadow: 0px 0px 71px var(--purple-low-opacity);
 
 		@media (max-width: 768px) {
 			font-size: 3rem;
@@ -68,7 +68,7 @@
 	}
 
 	.blog-article {
-		border: 1px dashed rgba(140, 98, 255, 0.3);
+		border: 1px dashed var(--purple-border-two);
 		padding: 2rem;
 		border-radius: 4px;
 	}

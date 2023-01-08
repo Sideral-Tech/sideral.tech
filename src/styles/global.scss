@@ -9,7 +9,6 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-
 @media (max-width: 868px) {
     * {
         scroll-margin-top: 1rem;
@@ -27,10 +26,10 @@ body {
     background-color: var(--bg-color);
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
     height: 100%;
-
 }
 
 .wrapper {
@@ -58,17 +57,20 @@ body.stop-transitions * {
     --white: #aca1cb;
     --white-two: #7f7796;
     --purple: #835fe8;
-    --purple-opacity: #494d86;
+    --purple-two: #494d86;
+    --purple-low-opacity: rgba(187, 163, 255, 0.36);
+    --purple-low-opacity-two: rgba(187, 163, 255, 0.2);
+    --purple-border: rgba(140, 98, 255, 0.2);
+    --purple-border-two: rgba(140, 98, 255, 0.3);
     --bg-color: #030713;
     --neutral-one: #28214b6e;
     --neutral-two: #101024;
     --font-one: "Chakra Petch", sans-serif;
     --font-two: "Space Mono", monospace;
-    --bezier-one: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 ::selection {
-    background: var(--purple-opacity);
+    background: var(--purple-low-opacity-two);
 }
 
 /*-----headings-----*/
@@ -93,7 +95,7 @@ h2 {
 }
 
 h3 {
-    color: var(--purple-opacity);
+    color: var(--purple-two);
     font-weight: 600;
     font-size: 2.5rem;
     letter-spacing: -0.06em;
@@ -107,7 +109,6 @@ h4 {
     letter-spacing: -0.06em;
 }
 
-
 p {
     font-family: var(--font-two);
     letter-spacing: -0.04em;
@@ -116,7 +117,9 @@ p {
     font-weight: 300;
     font-size: 0.95rem;
 
-    strong, del, em {
+    strong,
+    del,
+    em {
         font-family: var(--font-two);
     }
 }

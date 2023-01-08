@@ -23,14 +23,14 @@
 		hr {
 			height: 1px;
 			border: none;
-			border-top: 2px dashed rgba(140, 98, 255, 0.2);
+			border-top: 2px dashed var(--purple-border);
 		}
 
 		.stars-list {
 			margin-top: 7px;
 			margin-bottom: 4px;
 			text-transform: uppercase;
-			color: var(--purple-opacity);
+			color: var(--purple-two);
 			font-size: 1.25rem;
 			white-space: nowrap;
 			overflow: hidden;

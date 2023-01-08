@@ -50,7 +50,7 @@
 	h1 {
 		font-size: 4rem;
 		margin-bottom: 2rem;
-		text-shadow: 0px 0px 71px rgba(187, 163, 255, 0.36);
+		text-shadow: 0px 0px 71px var(--purple-low-opacity);
 
 		@media (max-width: 768px) {
 			font-size: 3rem;

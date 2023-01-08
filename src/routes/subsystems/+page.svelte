@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Footer from '../../lib/Footer.svelte';
-	export let data;
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <main class="wrapper">
@@ -50,7 +52,7 @@
 	h1 {
 		font-size: 4rem;
 		margin-bottom: 2rem;
-		text-shadow: 0px 0px 71px rgba(187, 163, 255, 0.36);
+		text-shadow: 0px 0px 71px var(--purple-low-opacity);
 
 		@media (max-width: 768px) {
 			font-size: 3rem;
@@ -71,7 +73,7 @@
 	}
 
 	.subsystem {
-		border: 1px dashed rgba(140, 98, 255, 0.3);
+		border: 1px dashed var(--purple-border-two);
 		border-radius: 4px;
 		padding: 2rem;
 		height: 100%;

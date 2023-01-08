@@ -57,7 +57,7 @@
 
 	h1 {
 		position: relative;
-		text-shadow: 0px 0px 71px rgba(187, 163, 255, 0.36);
+		text-shadow: 0px 0px 71px var(--purple-low-opacity);
 
 		&::before {
 			box-sizing: border-box;
@@ -67,7 +67,7 @@
 			width: 500px;
 			height: 175px;
 			border-radius: 50%;
-			border: 1px dashed rgba(140, 98, 255, 0.3);
+			border: 1px dashed var(--purple-border-two);
 			transform: rotate(-7.88deg) translate(-60px, -30px);
 		}
 
@@ -92,7 +92,7 @@
 			z-index: -2;
 			transform: translate(600px, 300px);
 			user-select: none;
-			filter: drop-shadow(0px 0px 71px rgba(187, 163, 255, 0.2));
+			filter: drop-shadow(0px 0px 71px var(--purple-low-opacity-two));
 			width: auto;
 
 			@media screen and (max-width: 868px) {
