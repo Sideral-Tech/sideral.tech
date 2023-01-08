@@ -4,6 +4,13 @@
 	import Nav from '../lib/NavBar.svelte';
 </script>
 
+<svelte:head>
+	<title>Sideral Technologies</title>
+	<meta property="og:site_name" content="Sideral Technologies" />
+	<meta property="og:url" content="https://sideral.tech" />
+	<meta property="og:description" content="Dominion through technology" />
+</svelte:head>
+
 <svg width="100%" height="100%">
 	<filter id="noise">
 		<feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="5" stitchTiles="stitch" />
