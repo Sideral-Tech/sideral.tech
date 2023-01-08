@@ -4,11 +4,11 @@
 
 	export let data: PageData;
 
-	// utterances settings
-	let theme = "boxy-light";
+	// giscus settings
+	let theme = "transparent_dark";
 	let reponame = "Sideral-Tech/sideral.tech"
-	let label = "blog comment"
-	let issueTerm = "pathname"
+	let category = "General"
+	let discussionTerm = "pathname"
 </script>
 
 <main class="wrapper">
@@ -25,13 +25,20 @@
 		<svelte:component this={data.component} />
 	</article>
 	<div class="blog-comments">
-		<script src="https://utteranc.es/client.js"
-		repo="{reponame}"
-		issue-term="{issueTerm}"
-		label="{label}"
-		theme="{theme}"
-		crossorigin="anonymous"
-		async>
+		<script src="https://giscus.app/client.js"
+			data-repo="{reponame}"
+			data-repo-id="R_kgDOIt5wHQ"
+			data-category="{category}"
+			data-category-id="DIC_kwDOIt5wHc4CTd0i"
+			data-mapping="{discussionTerm}"
+			data-strict="0"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="top"
+			data-theme="{theme}"
+			data-lang="en"
+			crossorigin="anonymous"
+			async>
 		</script>
 	</div>
 </main>
