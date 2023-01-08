@@ -83,7 +83,7 @@
 		}
 
 		h2::after {
-			content: url('open.svg');
+			content: url('/open.svg');
 			position: absolute;
 			right: 0;
 			transform: translate(24px, -18px);

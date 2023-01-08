@@ -87,7 +87,7 @@
 		margin-bottom: 2.75rem;
 		position: relative;
 		&::before {
-			content: url('building.png');
+			content: url('/building.png');
 			position: absolute;
 			z-index: -2;
 			transform: translate(600px, 300px);
@@ -113,7 +113,7 @@
 		text-transform: uppercase;
 
 		&::after {
-			content: url('open.svg');
+			content: url('/open.svg');
 			position: absolute;
 			transform: translate(5px, -20px);
 		}
