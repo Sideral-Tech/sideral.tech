@@ -10,7 +10,7 @@
 	<h1>/logs</h1>
 	<div class="blog-articles">
 		{#each data.posts as post}
-			<a href="logs/{post.slug}" class="blog-article">
+			<a href="/logs/{post.slug}/" class="blog-article">
 				<div class="date">{post.date}</div>
 				<h2>{post.title}</h2>
 				<p>{post.description}</p>

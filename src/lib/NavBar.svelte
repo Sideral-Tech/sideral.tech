@@ -5,9 +5,9 @@
 <nav class="wrapper" itemprop="breadcrumb"> 
 	<ul class="nav">
 		<NavButton href="/">👁️‍🗨️</NavButton>
-		<NavButton href="/logs">&#91 &nbsp LOGS &nbsp &#93;</NavButton>
-		<NavButton href="/subsystems">&#91 &nbsp SUBSYSTEMS &nbsp &#93;</NavButton>
-		<NavButton href="/info">&#91 &nbsp INFO &nbsp &#93;</NavButton>
+		<NavButton href="/logs/">&#91 &nbsp LOGS &nbsp &#93;</NavButton>
+		<NavButton href="/subsystems/">&#91 &nbsp SUBSYSTEMS &nbsp &#93;</NavButton>
+		<NavButton href="/info/">&#91 &nbsp INFO &nbsp &#93;</NavButton>
 	</ul>
 </nav>
 

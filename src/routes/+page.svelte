@@ -24,14 +24,14 @@
 	<Stars />
 	<section class="wrapper logs-container" itemscope itemtype="https://schema.org/ItemList">
 		<header itemprop="name">
-			<a href="/logs"><h3 id="logs">Logs</h3></a>
+			<a href="/logs/"><h3 id="logs">Logs</h3></a>
 		</header>
 		<div class="log-posts">
 			{#each data.posts.slice(0, 4) as post}
 				<section itemscope itemtype="http://schema.org/BlogPosting">
 					<div class="log-post">
 						<header itemprop="name">
-							<a href="logs/{post.slug}"><h4>{post.title}</h4></a>
+							<a href="/logs/{post.slug}/"><h4>{post.title}</h4></a>
 						</header>
 						<p itemprop="abstract">
 							{post.description}
