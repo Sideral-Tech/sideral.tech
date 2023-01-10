@@ -3,6 +3,7 @@
 import type { PageLoad } from './$types';
 
 export const prerender = true;
+export const trailingSlash = 'always';
 
 export const load: PageLoad = async () => {
 	const modules = import.meta.glob(`/src/posts/*.md`);
@@ -15,4 +16,4 @@ export const load: PageLoad = async () => {
 	const posts = await Promise.all(postPromises);
 	posts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
 	return { posts };
-};  
+};
