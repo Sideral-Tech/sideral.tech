@@ -1,7 +1,7 @@
 <section class="stars-list-container" itemprop="text">
 	<hr />
 	<div class="content">
-		{#each Array(10) as _, i}
+		{#each Array(10) as _}
 			<div class="text">
 				<div class="stars-list" itemscope itemtype="https://schema.org/ItemList">
 					Gacrux · Procyon · Adhara · Antares · Wei · Girtab · Sargas · Graffias · Atria · Shaula ·

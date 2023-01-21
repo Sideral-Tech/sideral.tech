@@ -1,5 +1,7 @@
 <script lang="ts">
-	import Footer from '../../lib/Footer.svelte';
+	import Chip from '$lib/Chip.svelte';
+	import GridItem from '$lib/GridItem.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -12,36 +14,28 @@
 		</header>
 		<div class="subsystems">
 			{#each data.subsystems as subsystem}
-				<section itemscope itemtype="https://schema.org/VirtualLocation">
-					<div class="subsystem" itemprop="itemListElement">
+				<GridItem name={subsystem.name} link={subsystem.url} description={subsystem.description}>
+					<div class="categories">
+						{#each subsystem.categories as category}
+							<Chip name={category} />
+						{/each}
+					</div>
+					<section itemscope itemtype="https://schema.org/ItemList">
 						<header itemprop="name">
-							<a href={subsystem.url} itemprop="url"><h2>{subsystem.name}</h2></a>
+							<h3>Modules</h3>
 						</header>
-						<p itemprop="description">{subsystem.description}</p>
-						<div class="categories">
-							{#each subsystem.categories as category}
-								<div class="category" itemprop="disambiguatingDescription">
-									{category}
-								</div>
+						<div class="modules">
+							{#each subsystem.modules as module}
+								<section itemscope itemtype="https://schema.org/SoftwareApplication">
+									<a itemprop="url" href={module.url} class="module">
+										<img itemprop="image" alt={module.name} src={module.logo} />
+										<div itemprop="name" class="text">{module.name}</div>
+									</a>
+								</section>
 							{/each}
 						</div>
-						<section itemscope itemtype="https://schema.org/ItemList">
-							<header itemprop="name">
-								<h3>Modules</h3>
-							</header>
-							<div class="modules">
-								{#each subsystem.modules as module}
-									<section itemscope itemtype="https://schema.org/SoftwareApplication">
-										<a itemprop="url" href={module.url} class="module">
-											<img itemprop="image" alt={module.name} src={module.logo} />
-											<div itemprop="name" class="text">{module.name}</div>
-										</a>
-									</section>
-								{/each}
-							</div>
-						</section>
-					</div>
-				</section>
+					</section>
+				</GridItem>
 			{/each}
 		</div>
 	</article>
@@ -49,16 +43,6 @@
 <Footer />
 
 <style lang="scss">
-	h1 {
-		font-size: 4rem;
-		margin-bottom: 2rem;
-		text-shadow: 0px 0px 71px var(--purple-low-opacity);
-
-		@media (max-width: 768px) {
-			font-size: 3rem;
-		}
-	}
-
 	.subsystems {
 		align-items: center;
 		display: grid;
@@ -71,31 +55,6 @@
 			grid-template-columns: 1fr;
 		}
 	}
-
-	.subsystem {
-		border: 1px dashed var(--purple-border-two);
-		border-radius: 4px;
-		padding: 2rem;
-		height: 100%;
-		overflow-x: hidden;
-
-		a h2 {
-			position: relative;
-			width: max-content;
-		}
-
-		h2::after {
-			content: url('/open.svg');
-			position: absolute;
-			right: 0;
-			transform: translate(24px, -18px);
-		}
-
-		p {
-			margin-bottom: 0.4rem;
-		}
-	}
-
 	.categories,
 	.modules {
 		display: flex;
@@ -103,22 +62,8 @@
 		flex-wrap: wrap;
 	}
 
-	.category,
-	.module {
-		font-family: var(--font-two);
-		letter-spacing: -0.06em;
-		font-size: 0.875rem;
-		background-color: var(--neutral-one);
-		color: var(--white);
-		border-radius: 2px;
-	}
-
 	.categories {
 		margin-bottom: 1rem;
-	}
-
-	.category {
-		padding: 0.25rem 0.5rem;
 	}
 
 	h3 {
@@ -127,6 +72,15 @@
 		color: var(--white);
 		margin-bottom: 0.25rem;
 		text-transform: uppercase;
+	}
+
+	.module {
+		font-family: var(--font-two);
+		letter-spacing: -0.06em;
+		font-size: 0.875rem;
+		background-color: var(--neutral-one);
+		color: var(--white);
+		border-radius: 2px;
 	}
 
 	.module {

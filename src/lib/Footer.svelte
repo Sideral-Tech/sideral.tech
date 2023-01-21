@@ -2,7 +2,8 @@
 	<div class="content-container">
 		<div id="logo" itemprop="name">sideral</div>
 		<div itemprop="creator" itemscope itemtype="https://schema.org/Person">
-			Copyright 2023 Alexandre Teles · Website by <a href="https://afn.lol" rel="noreferrer" target="_blank">afn</a>.
+			Copyright © 2023 Alexandre Teles · Website by
+			<a href="https://afn.lol" rel="noreferrer" target="_blank">afn</a>.
 		</div>
 		<ul>
 			<a href="https://github.com/Sideral-Tech" rel="noreferrer" target="_blank"><li>GitHub</li></a>
