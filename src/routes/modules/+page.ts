@@ -1,11 +1,6 @@
 import type { PageLoad } from './$types';
 
-const data = await fetch('https://api.github.com/orgs/sideral-tech/repos', {
-	method: 'GET',
-	headers: {
-		Authorization: `Bearer `
-	}
-});
+const data = await fetch('https://api.github.com/orgs/sideral-tech/repos')
 let repos: App.Repo[] = await data.json();
 
 const excludedRepos = ['.github'];
