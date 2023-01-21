@@ -4,22 +4,12 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-
-	const sloganList: string[] = [
-		'Conquest through superior technology.',
-		'Powering the future through unstoppable force.',
-		'Technology as the ultimate weapon.',
-		'Leading the galaxy through unrivaled power.',
-		'Defending our interests with the most advanced weaponry.',
-		'Dominion through technology.'
-	];
-	let randomSlogan = sloganList[Math.floor(Math.random() * sloganList.length)];
 </script>
 
 <main>
 	<header class="hero wrapper">
 		<h1 itemprop="name">sideral</h1>
-		<p itemprop="abstract">{randomSlogan}</p>
+		<p itemprop="abstract">{data.randomSlogan}</p>
 	</header>
 	<Stars />
 	<section class="wrapper logs-container" itemscope itemtype="https://schema.org/ItemList">
@@ -29,14 +19,16 @@
 		<div class="log-posts">
 			{#each data.posts.slice(0, 4) as post}
 				<section itemscope itemtype="http://schema.org/BlogPosting">
-					<div class="log-post">
-						<header itemprop="name">
-							<a href="/logs/{post.slug}/"><h4>{post.title}</h4></a>
-						</header>
-						<p itemprop="abstract">
-							{post.description}
-						</p>
-					</div>
+					<a href="/logs/{post.slug}/">
+						<div class="log-post">
+							<header itemprop="name">
+								<h4>{post.title}</h4>
+							</header>
+							<p itemprop="abstract">
+								{post.description}
+							</p>
+						</div>
+					</a>
 				</section>
 			{/each}
 		</div>
@@ -56,30 +48,25 @@
 	}
 
 	h1 {
+		font-size: 8rem;
+		margin-bottom: 0;
 		position: relative;
-		text-shadow: 0px 0px 71px var(--purple-low-opacity);
+
+		@media (max-width: 768px) {
+			font-size: 6rem;
+		}
 
 		&::before {
 			box-sizing: border-box;
 			content: '';
 			position: absolute;
 			overflow: hidden;
+			pointer-events: none;
 			width: 500px;
 			height: 175px;
 			border-radius: 50%;
 			border: 1px dashed var(--purple-border-two);
 			transform: rotate(-7.88deg) translate(-60px, -30px);
-		}
-
-		&::after {
-			content: '^413x';
-			font-family: var(--font-two);
-			font-weight: 400;
-			font-size: 20px;
-			color: var(--white);
-			letter-spacing: -0.06em;
-			position: absolute;
-			transform: translate(10px, -60px);
 		}
 	}
 
@@ -116,6 +103,11 @@
 			content: url('/open.svg');
 			position: absolute;
 			transform: translate(5px, -20px);
+			transition: filter 0.15s ease-in-out;
+		}
+
+		&:hover::after {
+			filter: brightness(1.5);
 		}
 	}
 

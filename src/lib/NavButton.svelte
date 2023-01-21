@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-
 	export let href: string;
 </script>
 
@@ -14,6 +13,7 @@
 	li {
 		color: var(--white-two);
 		cursor: pointer;
+		list-style: none;
 
 		&:hover,
 		&.selected {

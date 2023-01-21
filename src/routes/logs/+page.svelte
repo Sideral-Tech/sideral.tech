@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Chip from '$lib/Chip.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import type { PageData } from './$types';
 
@@ -17,7 +18,7 @@
 				{#if post.tags}
 					<div class="tags">
 						{#each post.tags as tag}
-							<div class="tag">{tag}</div>
+							<Chip name={tag} />
 						{/each}
 					</div>
 				{/if}
@@ -32,45 +33,23 @@
 		padding-bottom: 4rem;
 	}
 
-	.tag {
-		color: var(--white-two);
-		display: block;
-		font-weight: 500;
-		border-radius: 2px;
-		background-color: var(--neutral-one);
-		width: max-content;
-		padding: 0.25rem 0.5rem;
-		font-family: var(--font-two);
-		letter-spacing: -0.06em;
-		font-size: 0.875rem;
-
-		&s {
-			display: flex;
-			gap: 0.5rem;
-			margin-top: 1.5rem;
-		}
-	}
-
-	h1 {
-		font-size: 4rem;
-		margin-bottom: 2rem;
-		text-shadow: 0px 0px 71px var(--purple-low-opacity);
-
-		@media (max-width: 768px) {
-			font-size: 3rem;
-		}
+	.tags {
+		display: flex;
+		gap: 0.5rem;
+		margin-top: 1rem;
 	}
 
 	.blog-articles {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
 	}
 
 	.blog-article {
-		border: 1px dashed var(--purple-border-two);
-		padding: 2rem;
-		border-radius: 4px;
+		padding: 2rem 0;
+
+		&:not(:last-child) {
+			border-bottom: 1px dashed var(--purple-border-two);
+		}
 	}
 
 	.date {
