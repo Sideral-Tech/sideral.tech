@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Chip from '$lib/Chip.svelte';
-	import GridItem from '$lib/GridItem.svelte';
-	import Footer from '$lib/Footer.svelte';
+	import Chip from '$lib/components/Chip.svelte';
+	import GridItem from '$lib/components/GridItem.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

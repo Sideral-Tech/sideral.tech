@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Stars from '$lib/Stars.svelte';
-	import Footer from '../lib/Footer.svelte';
+	import Stars from '$lib/components/Stars.svelte';
+	import Footer from '../lib/components/Footer.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

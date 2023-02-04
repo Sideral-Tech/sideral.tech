@@ -3,7 +3,7 @@
 	export let href: string;
 </script>
 
-<a {href}>
+<a {href} on:click>
 	<li class:selected={href === '/' + $page.url.pathname.split('/')[1]}>
 		<slot />
 	</li>
@@ -19,5 +19,15 @@
 		&.selected {
 			color: var(--purple);
 		}
+	}
+
+	@media screen and (max-width: 768px) {
+		li {
+			font-size: 1.5rem;
+			padding-bottom: 0.75rem;
+			border-bottom: 1px solid var(--neutral-one);
+		}
+
+		
 	}
 </style>

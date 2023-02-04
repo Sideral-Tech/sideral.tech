@@ -30,6 +30,9 @@
 {/if}
 
 <style lang="scss">
+	a {
+		text-decoration: none !important;
+	}
 	.grid-item {
 		border: 1px dashed var(--purple-border-two);
 		border-radius: 4px;
@@ -38,6 +41,7 @@
 		margin: 0;
 		overflow-x: hidden;
 		transition: border 0.15s ease-in-out;
+		
 
 		&:hover {
 			border: 1px dashed var(--purple-two);
@@ -49,7 +53,6 @@
 
 		h2 {
 			position: relative;
-			width: max-content;
 			transition: color 0.15s ease-in-out;
 		}
 
