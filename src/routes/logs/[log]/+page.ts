@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 
 
 export const load: PageLoad = async ({ params }) => {
-	const logs = import.meta.glob('/src/posts/*.md');
+	const logs = import.meta.glob('/src/posts/*/*.md');
 
 	let match: { path?: string; resolver?: App.MdsvexResolver } = {};
 	for (const [path, resolver] of Object.entries(logs)) {

@@ -6,7 +6,7 @@ export const prerender = true;
 export const trailingSlash = 'always';
 
 export const load: PageLoad = async () => {
-	const modules = import.meta.glob(`/src/posts/*.md`);
+	const modules = import.meta.glob(`/src/posts/*/*.md`);
 	const postPromises = Object.entries(modules).map(([path, resolver]) =>
 		resolver().then(
 			(post) => ({ slug: path.split(/\/|\./)[3], ...(post as App.MdsvexFile).metadata } as App.Post)
