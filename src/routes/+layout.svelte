@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../styles/global.scss';
 	import '../styles/syntax.scss';
-	import Nav from '../lib/NavBar.svelte';
+	import Nav from '$lib/components/NavBar.svelte';
 </script>
 
 <svelte:head>
