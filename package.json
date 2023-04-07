@@ -31,7 +31,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@tinacms/cli": "^1.5.5",
 		"mdsvex": "^0.10.6",
-		"mdsvex-relative-images": "^1.0.3"
+		"mdsvex-relative-images": "^1.0.3",
+		"tinacms": "^1.4.5"
 	}
 }
