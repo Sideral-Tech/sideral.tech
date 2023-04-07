@@ -2,7 +2,14 @@
 	import Chip from '$lib/components/Chip.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import type { PageData } from './$types';
+
 	export let data: PageData;
+
+	// giscus settings
+	let theme = "transparent_dark";
+	let reponame = "Sideral-Tech/sideral.tech"
+	let category = "General"
+	let discussionTerm = "pathname"
 </script>
 
 <main class="wrapper">
@@ -18,6 +25,23 @@
 		<h1>&gt; {data.metadata.title}</h1>
 		<svelte:component this={data.component} />
 	</article>
+	<div class="blog-comments">
+		<script src="https://giscus.app/client.js"
+			data-repo="{reponame}"
+			data-repo-id="R_kgDOIt5wHQ"
+			data-category="{category}"
+			data-category-id="DIC_kwDOIt5wHc4CTd0i"
+			data-mapping="{discussionTerm}"
+			data-strict="0"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="top"
+			data-theme="{theme}"
+			data-lang="en"
+			crossorigin="anonymous"
+			async>
+		</script>
+	</div>
 </main>
 <Footer />
 
