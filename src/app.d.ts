@@ -13,6 +13,7 @@ declare namespace App {
 		description: string;
 		tags: string[];
 		date: string;
+		image: string;
 	}
 
 	interface Subsystem {

@@ -7,8 +7,7 @@
 <svelte:head>
 	<title>Sideral Technologies</title>
 	<meta property="og:site_name" content="Sideral Technologies" />
-	<meta property="og:url" content="https://sideral.tech" />
-	<meta property="og:description" content="Dominion through technology" />
+	<meta property="og:locale" content="en_US" />
 </svelte:head>
 
 <svg width="100%" height="100%">

@@ -2,9 +2,19 @@
 	import Stars from '$lib/components/Stars.svelte';
 	import Footer from '../lib/components/Footer.svelte';
 	import type { PageData } from './$types';
+	import { page } from '$app/stores';
 
 	export let data: PageData;
+	const url = $page.url.href;
 </script>
+
+<svelte:head>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Homepage" />
+	<meta property="og:description" content="Dominion through technology" />
+	<meta property="og:image" content="https://sideral.tech/logo.png" />
+	<meta property="og:url" content={url} />
+</svelte:head>
 
 <main>
 	<header class="hero wrapper">

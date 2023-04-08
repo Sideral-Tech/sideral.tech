@@ -1,6 +1,17 @@
 <script>
+	import { page } from '$app/stores';
 	import Footer from '../../lib/components/Footer.svelte';
+
+	const url = $page.url.href;
 </script>
+
+<svelte:head>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Info" />
+	<meta property="og:description" content="About Sideral Technologies" />
+	<meta property="og:image" content="https://sideral.tech/logo.png" />
+	<meta property="og:url" content="{url}" />
+</svelte:head>
 
 <main class="wrapper">
 	<article itemscope itemtype="https://schema.org/AboutPage">

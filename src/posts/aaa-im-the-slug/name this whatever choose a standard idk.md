@@ -4,6 +4,7 @@ description: 'this is a description efvieruhvruuuuuuu uuuuuuuuuuuuuuuuuuuuuuuuuu
 author: '@xafn'
 tags: ['hii']
 date: '2023-10-01'
+image: 'logo.png'
 ---
 
 hi

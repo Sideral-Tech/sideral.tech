@@ -2,10 +2,20 @@
 	import Chip from '$lib/components/Chip.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import type { PageData } from './$types';
+	import { page } from '$app/stores';
 
 	// hydrated from ./+layout.svelte
 	export let data: PageData;
+	const url = $page.url.href;
 </script>
+
+<svelte:head>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Logs" />
+	<meta property="og:description" content="(B)Logs" />
+	<meta property="og:image" content="https://sideral.tech/logo.png" />
+	<meta property="og:url" content={url} />
+</svelte:head>
 
 <main class="wrapper">
 	<h1>/logs</h1>

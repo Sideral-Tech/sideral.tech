@@ -3,10 +3,20 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import GridItem from '$lib/components/GridItem.svelte';
 	import type { PageData } from './$types';
+	import { page } from '$app/stores';
 
 	export let data: PageData;
-	console.log(data);
+	const url = $page.url.href;
+	//console.log(data);
 </script>
+
+<svelte:head>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Modules" />
+	<meta property="og:description" content="Our software repository" />
+	<meta property="og:image" content="https://sideral.tech/logo.png" />
+	<meta property="og:url" content={url} />
+</svelte:head>
 
 <main class="wrapper">
 	<article itemscope itemtype="https://schema.org/ItemList">
