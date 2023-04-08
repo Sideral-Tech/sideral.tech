@@ -34,7 +34,7 @@
 			data-mapping="{discussionTerm}"
 			data-strict="0"
 			data-reactions-enabled="1"
-			data-emit-metadata="0"
+			data-emit-metadata="1"
 			data-input-position="top"
 			data-theme="{theme}"
 			data-lang="en"
