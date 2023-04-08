@@ -3,10 +3,9 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import GridItem from '$lib/components/GridItem.svelte';
 	import type { PageData } from './$types';
-	import { page } from '$app/stores';
 
 	export let data: PageData;
-	const url = $page.url.href;
+
 	//console.log(data);
 </script>
 
@@ -14,8 +13,8 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Modules" />
 	<meta property="og:description" content="Our software repository" />
-	<meta property="og:image" content="https://sideral.tech/logo.png" />
-	<meta property="og:url" content={url} />
+	<meta property="og:image" content="/logo.png" />
+	<meta property="og:url" content="." />
 </svelte:head>
 
 <main class="wrapper">

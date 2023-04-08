@@ -2,10 +2,8 @@
 	import Chip from '$lib/components/Chip.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import type { PageData } from './$types';
-	import { page } from '$app/stores';
 
 	export let data: PageData;
-	const url = $page.url;
 
 	// giscus settings
 	let theme = 'transparent_dark';
@@ -18,8 +16,8 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.metadata.title} />
 	<meta property="og:description" content={data.metadata.description} />
-	<meta property="og:image" content="https://{url.host}{data.metadata.image}" />
-	<meta property="og:url" content={url.href} />
+	<meta property="og:image" content={data.metadata.image} />
+	<meta property="og:url" content="." />
 	<meta property="article:published_time" content={data.metadata.date} />
 	<meta property="article:author" content={data.metadata.author} />
 	<meta property="article:tag" content={data.metadata.tags} />
